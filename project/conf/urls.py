@@ -29,8 +29,8 @@ from project.views import ProjectViewSet
 
 router = DefaultRouter()
 
-router.register(r"todos", TodoViewSet, basename="todo")
-router.register(r"users", UserViewset, basename="user")
+router.register(r"todos", TodoViewSet, basename="todos")
+router.register(r"users", UserViewset, basename="users")
 router.register(r"projects", ProjectViewSet, basename="projects")
 
 urlpatterns = [

@@ -28,4 +28,12 @@ class UserSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         """Create a user with a hashed password."""
-        return User.objects.create_user(**validated_data)
+        groups_data = validated_data.pop("groups", [])
+        user_permissions_data = validated_data.pop("user_permissions", [])
+
+        user = User.objects.create_user(**validated_data)
+
+        user.groups.set(groups_data)
+        user.user_permissions.set(user_permissions_data)
+
+        return user

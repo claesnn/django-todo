@@ -13,10 +13,21 @@ class TodoFilter(filters.FilterSet):
     created_at = filters.DateFromToRangeFilter()
     updated_at = filters.DateFromToRangeFilter()
     project = filters.NumberFilter()
+    completed_at = filters.DateFromToRangeFilter()
+    deadline = filters.DateFromToRangeFilter()
 
     class Meta:
         model = Todo
-        fields = ["user", "title", "completed", "created_at", "updated_at", "project"]
+        fields = [
+            "user",
+            "title",
+            "completed",
+            "created_at",
+            "updated_at",
+            "project",
+            "completed_at",
+            "deadline",
+        ]
 
 
 class TodoViewSet(viewsets.ModelViewSet):
