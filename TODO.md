@@ -4,7 +4,7 @@
 
 ### Tasks
 
-- [ ] Write tests
+- [ ] Notify users when deadlines are exceeded
 - [ ] Deploy application to production
 
 ### Future Enhancements

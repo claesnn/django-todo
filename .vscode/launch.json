@@ -1,0 +1,104 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "DJANGO Make-Migrations",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/project/manage.py",
+            "args": [
+                "makemigrations"
+            ],
+            "django": true
+        },
+        {
+            "name": "DJANGO Make-Migrations(MERGE)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/project/manage.py",
+            "args": [
+                "makemigrations",
+                "--merge"
+            ],
+            "django": true
+        },
+        {
+            "name": "DJANGO Migrate",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/project/manage.py",
+            "args": [
+                "migrate"
+            ],
+            "django": true
+        },
+        {
+            "name": "DJANGO runserver API Server",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/project/manage.py",
+            "args": [
+                "runserver",
+                "127.0.0.1:8000",
+            ],
+            "justMyCode": false,
+            "django": true,
+            "env": {
+                "DJANGO_SETTINGS_MODULE": "conf.settings",
+                "PYTHONPATH": "${workspaceFolder}"
+            }
+        },
+        {
+            "name": "Test:ALL",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/project/manage.py",
+            "args": [
+                "test"
+            ]
+        },
+        {
+            "name": "Test:SPECIFIC",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/project/manage.py",
+            "args": [
+                "test",
+                "--keepdb",
+                "appname.tests.modulename.ClassName.test_name"
+            ],
+            "django": true
+        },
+        {
+            "name": "Django Tests",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/project/manage.py",
+            "args": [
+                "test",
+                "project",
+            ],
+            "django": true
+        },
+        {
+            "name": "View Test Results",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/project/manage.py",
+            "args": [
+                "showtestfails"
+            ],
+            "django": true
+        },
+        {
+            "name": "CLI Runner",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/project/manage.py",
+            "args": [
+                "cli"
+            ],
+            "django": true
+        }
+    ]
+}
