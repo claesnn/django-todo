@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     "core",
     "project",
     "django_filters",
+    "django_tasks",
+    "django_tasks.backends.database",
 ]
 
 MIDDLEWARE = [
@@ -80,8 +82,12 @@ WSGI_APPLICATION = "conf.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "django-todo",
+        "USER": "postgres",
+        "PASSWORD": "nina",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
 
@@ -134,5 +140,7 @@ REST_FRAMEWORK = {
         "rest_framework.filters.OrderingFilter",
     ),
 }
+
+TASKS = {"default": {"BACKEND": "django_tasks.backends.database.DatabaseBackend"}}
 
 AUTH_USER_MODEL = "core.User"
