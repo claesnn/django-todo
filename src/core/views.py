@@ -31,8 +31,6 @@ class TodoFilter(filters.FilterSet):
 
 
 class TodoViewSet(viewsets.ModelViewSet):
-    """ViewSet for the Todo model."""
-
     serializer_class = TodoSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
     queryset = Todo.objects.all()
@@ -44,8 +42,6 @@ class TodoViewSet(viewsets.ModelViewSet):
 
 
 class UserViewset(viewsets.ModelViewSet):
-    """ViewSet for the User model."""
-
     serializer_class = UserSerializer
     queryset = User.objects.all()
     permission_classes = [IsAuthenticatedOrReadOnly]

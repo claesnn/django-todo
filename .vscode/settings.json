@@ -1,19 +1,19 @@
 {
     "[python]": {
-        "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
         "editor.codeActionsOnSave": {
             "source.organizeImports": "explicit"
-        },
+        }
     },
-    "isort.args": [
-        "--profile",
-        "black"
+    "ruff.lint.select": [
+        "I",
+        "E",
+        "W",
+        "F",
+        "C",
+        "PL"
     ],
-    "pylint.args": [
-        "--load-plugins",
-        "pylint_django",
-        "--django_settings_module",
-        "src.conf.settings"
-    ],
+    "ruff.lint.ignore": [
+        "E501"
+    ]
 }

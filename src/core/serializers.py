@@ -1,5 +1,6 @@
-from core.models import Todo, User
 from rest_framework import serializers
+
+from core.models import Todo, User
 
 
 class TodoSerializer(serializers.ModelSerializer):
