@@ -20,6 +20,8 @@ class Todo(models.Model):
     project = models.ForeignKey(
         "project.Project", on_delete=models.CASCADE, related_name="todos", null=True
     )
+    completed_at = models.DateTimeField(null=True, blank=True)
+    deadline = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
         return str(self.title)

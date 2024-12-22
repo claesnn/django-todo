@@ -15,5 +15,14 @@
         "pylint_django",
         "--django_settings_module",
         "project.conf.settings"
-    ]
+    ],
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./project",
+        "-p",
+        "test*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true
 }
