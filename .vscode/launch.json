@@ -5,7 +5,7 @@
             "name": "DJANGO Make-Migrations",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/project/manage.py",
+            "program": "${workspaceFolder}/src/manage.py",
             "args": [
                 "makemigrations"
             ],
@@ -15,7 +15,7 @@
             "name": "DJANGO Make-Migrations(MERGE)",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/project/manage.py",
+            "program": "${workspaceFolder}/src/manage.py",
             "args": [
                 "makemigrations",
                 "--merge"
@@ -26,7 +26,7 @@
             "name": "DJANGO Migrate",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/project/manage.py",
+            "program": "${workspaceFolder}/src/manage.py",
             "args": [
                 "migrate"
             ],
@@ -36,7 +36,7 @@
             "name": "DJANGO runserver API Server",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/project/manage.py",
+            "program": "${workspaceFolder}/src/manage.py",
             "args": [
                 "runserver",
                 "127.0.0.1:8000",
@@ -52,7 +52,7 @@
             "name": "Test:ALL",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/project/manage.py",
+            "program": "${workspaceFolder}/src/manage.py",
             "args": [
                 "test"
             ]
@@ -61,7 +61,7 @@
             "name": "Test:SPECIFIC",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/project/manage.py",
+            "program": "${workspaceFolder}/src/manage.py",
             "args": [
                 "test",
                 "--keepdb",
@@ -73,10 +73,10 @@
             "name": "Django Tests",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/project/manage.py",
+            "program": "${workspaceFolder}/src/manage.py",
             "args": [
                 "test",
-                "project",
+                "src",
             ],
             "django": true
         },
@@ -84,7 +84,7 @@
             "name": "View Test Results",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/project/manage.py",
+            "program": "${workspaceFolder}/src/manage.py",
             "args": [
                 "showtestfails"
             ],
@@ -94,7 +94,7 @@
             "name": "CLI Runner",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/project/manage.py",
+            "program": "${workspaceFolder}/src/manage.py",
             "args": [
                 "cli"
             ],

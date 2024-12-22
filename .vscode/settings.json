@@ -14,6 +14,6 @@
         "--load-plugins",
         "pylint_django",
         "--django_settings_module",
-        "project.conf.settings"
+        "src.conf.settings"
     ],
 }
