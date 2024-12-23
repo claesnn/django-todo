@@ -144,3 +144,5 @@ REST_FRAMEWORK = {
 TASKS = {"default": {"BACKEND": "django_tasks.backends.database.DatabaseBackend"}}
 
 AUTH_USER_MODEL = "core.User"
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
